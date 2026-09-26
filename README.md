@@ -2,6 +2,8 @@
 
 Limits battery charging to **80%** on the **Redmi Book Pro 16 2024/2025** under Linux, using the laptop's own EC firmware via ACPI/WMI calls.
 
+Should work on any distribution with kernel ≥ 5.x.
+
 Tested on:
 - Ubuntu 25.10 with kernel 6.17 (Xiaomi Redmi Book Pro 16 2024)
 - Debian GNU/Linux 13 (trixie) with kernel 6.12.107+deb13-amd64 (Xiaomi Redmi Book Pro 16 2025)
