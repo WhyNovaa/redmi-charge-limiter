@@ -1,9 +1,10 @@
-# Battery Charge Limit — Redmi Book Pro 16 2024
+# Battery Charge Limit — Redmi Book Pro 16 2024/2025
 
-Limits battery charging to **80%** on the **Redmi Book Pro 16 2024** (model TM2309) under Linux, using the laptop's own EC firmware via ACPI/WMI calls.
+Limits battery charging to **80%** on the **Redmi Book Pro 16 2024/2025** under Linux, using the laptop's own EC firmware via ACPI/WMI calls.
 
-Tested on Ubuntu 25.10 with kernel 6.17. Should work on any distribution with kernel ≥ 5.x.
-
+Tested on:
+- Ubuntu 25.10 with kernel 6.17 (Xiaomi Redmi Book Pro 16 2024)
+- Debian GNU/Linux 13 (trixie) with kernel 6.12.107+deb13-amd64 (Xiaomi Redmi Book Pro 16 2025)
 > **Note for 2025 model owners:** The [ArchWiki script](https://wiki.archlinux.org/title/Xiaomi_RedmiBook_Pro_16_2025) for the 2025 model uses the same ACPI path but a broken enable sequence. This repository's script works correctly on both models.
 
 ---
@@ -44,6 +45,12 @@ sudo pacman -S acpi_call-dkms
 
 # Fedora
 sudo dnf install acpi_call
+```
+
+Load acpi_call into the kernel:
+
+```bash
+sudo modprobe acpi_call
 ```
 
 Verify it loaded:
